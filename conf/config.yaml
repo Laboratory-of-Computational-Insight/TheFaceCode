@@ -1,0 +1,20 @@
+model:
+  #  restore_path: models/3_model/3_emotions/normalized/epoch60_last.pth
+  restore_path: null
+  save_path: models/submitted
+
+wasabi:
+  bucket: face-vec
+  data_path: data/
+  model_path : models/
+  wasabi_url : https://s3.eu-central-1.wasabisys.com
+  wasabi_base : https://wasabisys.com
+  region : eu-central-1
+  key: CVDRWBSISE4853HEJKRQ
+  secret: FATwB6Z61YtEVKXeyG1C4iLABEfYfHQ3BEornSsG
+
+data:
+  batch_size: 320
+  train_limit: null
+  val_limit: 1_000
+  test_limit: 1_000

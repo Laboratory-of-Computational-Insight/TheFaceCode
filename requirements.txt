@@ -1,0 +1,35 @@
+# Core PyTorch (install with the right CUDA/CPU wheel manually if needed)
+torch
+torchvision
+torchaudio
+
+# ML / DS
+numpy
+pandas
+scikit-learn
+scipy
+tqdm
+pydantic
+statsmodels
+scikit-spatial
+
+# Computer vision / media
+opencv-python
+pillow
+imageio
+moviepy
+
+# Visualization
+matplotlib
+plotly
+kaleido
+
+# Storage / cloud
+boto3
+
+# Model interpretability & pretrained models
+grad-cam
+pretrainedmodels
+pytorchcv
+
+PyYAML
