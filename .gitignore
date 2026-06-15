@@ -131,6 +131,8 @@ dmypy.json
 
 /datasets/*
 /wandb/*
+/models/
+/data/
 /.idea
 tmp/
 /venv*

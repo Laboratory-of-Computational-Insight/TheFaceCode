@@ -6,9 +6,13 @@ import torch
 from sklearn.preprocessing import LabelEncoder
 from torch.utils.data import Dataset
 
-from utils.filesystem.fs import FS
 import csv
 from enum import Enum, IntEnum
+
+# Path to the FER2013 CSV file. Edit this to match your local setup.
+# Expected format: columns = [emotion, pixels, Usage]
+# where pixels is a space-separated string of 48×48 pixel values.
+FER2013_CSV = "./data/fer2013.csv"
 
 from sklearn.model_selection import train_test_split
 
@@ -36,7 +40,7 @@ seven_to_three_conversion = {
 class FER2013DataSet(Dataset):
     def __init__(self, train_val_test, labels=None, split=0.1, random_state = 42, shuffle=True, normalize=True):
         self.data = []
-        data_path = FS().get_file("data/all7labels_FER2013_disgustRAF-DB_Affectnet/fer2013.csv")
+        data_path = FER2013_CSV
         df = pd.read_csv(data_path)
         le = LabelEncoder()
 
